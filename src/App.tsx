@@ -1,19 +1,21 @@
-import{ useState, useEffect }from 'react'; 
+import React from 'react';
 import './App.css'
-import  Header from './components/Header.tsx';
-import Form  from './components/Form.tsx';
-import ClientSection from './components/Client.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Form from './components/Form';
+import Client from './components/Client';
 function App() {
  
 // receber parametro (nome) fora da função
 
   return (
-
-    <>
-      {/* <Header/>
-      <Form/> */}
-      <ClientSection />
-    </>
+<BrowserRouter>
+<Routes>
+  <Route path='/' element={<Form/>}/>
+  <Route path='/Client' element={<Client />}/>
+  <Route path="*" element={<h1>Page not found</h1>}/>
+</Routes>
+</BrowserRouter>
+   
   )
 }
 
