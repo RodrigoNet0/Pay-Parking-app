@@ -9,7 +9,7 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
+  { name: 'Payment', href: '#', current: true },
   { name: 'Team', href: '#', current: false },
   { name: 'Projects', href: '#', current: false },
   { name: 'Calendar', href: '#', current: false },
@@ -25,10 +25,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function ClientSection() {
   return (
     <>
-      
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
           {({ open }) => (
@@ -183,11 +182,40 @@ export default function Example() {
 
         <header className="bg-white shadow">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Payment</h1>
           </div>
         </header>
         <main>
-          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
+          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+            <div className="max-w-lg mx-auto bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">Payment Information</h2>
+              <form>
+                <div className="mb-4">
+                  <label htmlFor="cardNumber" className="block text-gray-700 font-medium mb-1">Card Number</label>
+                  <input type="text" id="cardNumber" name="cardNumber" className="form-input w-full border-gray-300 rounded-md" placeholder="Enter card number" />
+                </div>
+                <div className="grid grid-cols-3 gap-4 mb-4">
+                  <div>
+                    <label htmlFor="expMonth" className="block text-gray-700 font-medium mb-1">Expiration Month</label>
+                    <input type="text" id="expMonth" name="expMonth" className="form-input w-full border-gray-300 rounded-md" placeholder="MM" />
+                  </div>
+                  <div>
+                    <label htmlFor="expYear" className="block text-gray-700 font-medium mb-1">Expiration Year</label>
+                    <input type="text" id="expYear" name="expYear" className="form-input w-full border-gray-300 rounded-md" placeholder="YYYY" />
+                  </div>
+                  <div>
+                    <label htmlFor="cvc" className="block text-gray-700 font-medium mb-1">CVC</label>
+                    <input type="text" id="cvc" name="cvc" className="form-input w-full border-gray-300 rounded-md" placeholder="CVC" />
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="cardHolder" className="block text-gray-700 font-medium mb-1">Cardholder Name</label>
+                  <input type="text" id="cardHolder" name="cardHolder" className="form-input w-full border-gray-300 rounded-md" placeholder="Cardholder Name" />
+                </div>
+                <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-100">Submit Payment</button>
+              </form>
+            </div>
+          </div>
         </main>
       </div>
     </>
