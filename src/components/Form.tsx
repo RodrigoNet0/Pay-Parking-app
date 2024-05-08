@@ -116,9 +116,9 @@ function Form() {
             <Link to={'/Client'} className="text-sm font-semibold leading-6 text-gray-900">
               Payment
             </Link>
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link to={'/Shop'} className="text-sm font-semibold leading-6 text-gray-900">
               Marketplace
-            </a>
+            </Link>
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
               Company
             </a>
