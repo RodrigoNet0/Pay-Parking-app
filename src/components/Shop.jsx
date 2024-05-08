@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { FaAngleDoubleLeft } from "react-icons/fa";
 const products = [
   {
     id: 1,
@@ -79,7 +81,7 @@ const products = [
     imageSrc:
       "https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-oversized-zancanelli-classic-physique-preto-2.webp",
     imageAlt: "Front of men's Basic Tee in black.",
-    price: "R$:159,90",
+    price: "R$:161,85",
     color: "Black",
   },
   {
@@ -94,11 +96,12 @@ const products = [
   // More products...
 ];
 
-export default function Example() {
+export default function Shop() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+      <div className=" mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <Link className='  hover:text-black rounded-md px-3 py-2' to={'/Form'}><FaAngleDoubleLeft size={40} /></Link>
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-4">
           Customers also purchased
         </h2>
 

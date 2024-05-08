@@ -1,9 +1,9 @@
+import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Fragment } from "react";
+import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 
-import React from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Fragment } from 'react'
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -12,43 +12,80 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+} from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+} from "@heroicons/react/20/solid";
 
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
+  {
+    name: "Analytics",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Engagement",
+    description: "Speak directly to your customers",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Security",
+    description: "Your customers’ data will be safe and secure",
+    href: "#",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Integrations",
+    description: "Connect with third-party tools",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Automations",
+    description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+];
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
+  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
+  { name: "Contact sales", href: "#", icon: PhoneIcon },
+];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
-
 
 function Form() {
   const [name, setName] = useState([]);
 
-  const handlenameChange = (event: { target: { value: React.SetStateAction<never[]>; }; }) => {
+  const handlenameChange = (event: {
+    target: { value: React.SetStateAction<never[]> };
+  }) => {
     setName(event.target.value);
   };
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
       <header className="bg-gray-200 rounded-lg">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <nav
+          className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+          aria-label="Global"
+        >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.d2469773.svg" alt="parking-pay" />
+              <img
+                className="h-8 w-auto"
+                src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.d2469773.svg"
+                alt="Mith-profile"
+              />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -65,7 +102,10 @@ function Form() {
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
                 Product
-                <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+                <ChevronDownIcon
+                  className="h-5 w-5 flex-none text-gray-400"
+                  aria-hidden="true"
+                />
               </Popover.Button>
 
               <Transition
@@ -85,14 +125,22 @@ function Form() {
                         className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                       >
                         <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                          <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                          <item.icon
+                            className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                            aria-hidden="true"
+                          />
                         </div>
                         <div className="flex-auto">
-                          <a href={item.href} className="block font-semibold text-gray-900">
+                          <a
+                            href={item.href}
+                            className="block font-semibold text-gray-900"
+                          >
                             {item.name}
                             <span className="absolute inset-0" />
                           </a>
-                          <p className="mt-1 text-gray-600">{item.description}</p>
+                          <p className="mt-1 text-gray-600">
+                            {item.description}
+                          </p>
                         </div>
                       </div>
                     ))}
@@ -104,7 +152,10 @@ function Form() {
                         href={item.href}
                         className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                       >
-                        <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+                        <item.icon
+                          className="h-5 w-5 flex-none text-gray-400"
+                          aria-hidden="true"
+                        />
                         {item.name}
                       </a>
                     ))}
@@ -113,23 +164,39 @@ function Form() {
               </Transition>
             </Popover>
 
-            <Link to={'/Client'} className="text-sm font-semibold leading-6 text-gray-900">
+            <Link
+              to={"/Client"}
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
               Payment
             </Link>
-            <Link to={'/Shop'} className="text-sm font-semibold leading-6 text-gray-900">
+            <Link
+              to={"/Shop"}
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
               Marketplace
             </Link>
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            <a
+              href="#"
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
               Company
             </a>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link
+              to={"/Login"}
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
               Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
           </div>
         </nav>
-        <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <Dialog
+          className="lg:hidden"
+          open={mobileMenuOpen}
+          onClose={setMobileMenuOpen}
+        >
           <div className="fixed inset-0 z-10" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
@@ -138,7 +205,8 @@ function Form() {
                 <img
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt="" />
+                  alt=""
+                />
               </a>
               <button
                 type="button"
@@ -158,8 +226,12 @@ function Form() {
                         <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                           Product
                           <ChevronDownIcon
-                            className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
-                            aria-hidden="true" />
+                            className={classNames(
+                              open ? "rotate-180" : "",
+                              "h-5 w-5 flex-none"
+                            )}
+                            aria-hidden="true"
+                          />
                         </Disclosure.Button>
                         <Disclosure.Panel className="mt-2 space-y-2">
                           {[...products, ...callsToAction].map((item) => (
@@ -177,7 +249,7 @@ function Form() {
                     )}
                   </Disclosure>
                   <Link
-                    to={'/Client'}
+                    to={"/Client"}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Payment
@@ -207,61 +279,11 @@ function Form() {
             </div>
           </Dialog.Panel>
         </Dialog>
-      </header><div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img className="mx-auto h-10 w-auto" src="https://www.pngall.com/wp-content/uploads/12/Ticket-PNG-Image-File.png" alt="Your Company" />
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
-        </div>
+      </header>
 
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">Email address</label>
-              <div className="mt-2">
-                <input id="email" name="email" type="email" autoComplete="email" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-              </div>
-            </div>
-
-            <div>
-              <div className="flex items-center justify-between">
-                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">Password</label>
-                <div className="text-sm">
-                  <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">Forgot password?</a>
-                </div>
-              </div>
-              <div className="mt-2">
-                <input id="password" name="password" type="password" autoComplete="current-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-              </div>
-            </div>
-
-            <div>
-              <button type="submit" className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
-            </div>
-          </form>
-
-          <p className="mt-10 text-center text-sm text-gray-500">
-            <a href="https://github.com/rodrigonet0" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Desenvolvido por Rodrigo Neto ₢</a>
-          </p>
-
-        </div>
-      </div>
-
+      {/* //header end => navigation */}
     </>
-
-
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default Form;
