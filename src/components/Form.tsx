@@ -114,9 +114,9 @@ const handlenameChange = (event: { target: { value: React.SetStateAction<never[]
               </Transition>
             </Popover>
 
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              Features
-            </a>
+            <Link to={'/Client'} className="text-sm font-semibold leading-6 text-gray-900">
+              Payment
+            </Link>
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
               Marketplace
             </a>
