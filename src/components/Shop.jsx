@@ -133,6 +133,13 @@ export default function Shop() {
           ))}
         </div>
       </div>
+
+{/* Profile Dropdown */}
+
+
+
+
+
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import { FaAngleDoubleLeft } from "react-icons/fa";
 
 function Login(){
     return (
@@ -35,7 +35,7 @@ function Login(){
                 </div>
             </form>
 
-            <Link className=' flex flex-col justify-center text-center mt-7 hover:bg-slate-300 bg-indigo-700 text-white hover:text-black rounded-md px-3 py-2 text-sm font-medium' to={'/Form'}><FaAngleDoubleLeft /></Link>
+            <Link className=' flex flex-col justify-center text-center mt-7 hover:bg-slate-300 bg-indigo-700 text-white hover:text-black rounded-md px-3 py-2 text-sm font-medium' to={'/Form'}><FaAngleDoubleLeft size={30} /></Link>
             
 
         </div>

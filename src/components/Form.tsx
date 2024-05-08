@@ -61,7 +61,7 @@ function classNames(...classes: string[]) {
 }
 
 function Form() {
-  const [name, setName] = useState([]);
+  const [, setName] = useState([]);
 
   const handlenameChange = (event: {
     target: { value: React.SetStateAction<never[]> };
