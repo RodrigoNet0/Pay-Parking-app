@@ -43,12 +43,12 @@ function Form() {
 
   return (
     <>
-      <header className="bg-slate-400 rounded-lg">
+      <header className="bg-gray-200 rounded-lg">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src="https://th.bing.com/th/id/R.bc2bf16977f54af49ed0883388029bbe?rik=8EjvAt%2b%2b1bM05A&pid=ImgRaw&r=0" alt="parking-pay" />
+              <img className="h-8 w-auto" src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.d2469773.svg" alt="parking-pay" />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -240,8 +240,7 @@ function Form() {
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
-            Not a member?
-            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Start a 14 day free trial</a>
+            <a href="https://github.com/rodrigonet0" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Desenvolvido por Rodrigo Neto ₢</a>
           </p>
 
         </div>
