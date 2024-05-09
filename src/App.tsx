@@ -20,7 +20,7 @@ function App() {
         <Route path="/Shop" element={<Shop />} />
         <Route path="/Form" element={<Form />}/>
         <Route path='/Login' element={<Login />}/>
-        {/* <Route path="/Home" element={<Home/>}/> */}
+         {/* <Route path="/Home" element={<Home/>}/>  */}
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
     </BrowserRouter>

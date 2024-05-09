@@ -282,6 +282,16 @@ function Form() {
       </header>
 
       {/* //header end => navigation */}
+
+      <div>
+        <h1 className="text-center font-extrabold">FRETE GRÁTIS A PARTIR DE R$ 199,00</h1>
+      </div>
+
+      <div>
+        <img src="https://www.mithoficial.com.br/upload/banner/56d574d648cb2dc1203fd157d27e0982.webp" alt="apresentação"/>
+      </div>
+
+      
     </>
   );
 }
