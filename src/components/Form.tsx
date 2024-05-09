@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import { Fragment } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 
+import "tailwindcss/tailwind.css";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -60,13 +64,27 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-function Form() {
-  const [, setName] = useState([]);
+const features = [
+  { name: "Dino", description: "A coleção Ramon Dino se destaca como um dos pontos fortes da marca, inspirada por uma figura proeminente no cenário do fisiculturismo nacional." },
+  {
+    name: "Material",
+    description:
+      "Solid walnut base with rare earth magnets and powder coated steel card cover",
+  },
+  { name: "Dimensions", description: '6.25" x 3.55" x 1.15"' },
+  { name: "Finish", description: "Hand sanded and finished with natural oil" },
+  { name: "Includes", description: "Wood card tray and 3 refill packs" },
+  {
+    name: "Considerations",
+    description:
+      "Made from natural materials. Grain and color vary with each item.",
+  },
+];
 
-  const handlenameChange = (event: {
-    target: { value: React.SetStateAction<never[]> };
-  }) => {
-    setName(event.target.value);
+function Form() {
+  const responsive = {
+    0: { items: 1 },
+    1024: { items: 4 },
   };
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -284,14 +302,90 @@ function Form() {
       {/* //header end => navigation */}
 
       <div>
-        <h1 className="text-center font-extrabold">FRETE GRÁTIS A PARTIR DE R$ 199,00</h1>
+        <h1 className=" bg-slate-300 text-center font-extrabold py-3">
+          FRETE GRÁTIS A PARTIR DE R$ 199,00{" "}
+        </h1>
       </div>
 
-      <div>
-        <img src="https://www.mithoficial.com.br/upload/banner/56d574d648cb2dc1203fd157d27e0982.webp" alt="apresentação"/>
-      </div>
+      <AliceCarousel
+        responsive={responsive}
+        autoPlay
+        autoPlayInterval={1000}
+        infinite
+      >
+        <div className="bg-gray-300 p-2">
+          <img
+            className="w-full h-auto md:max-w-none md:max-h-96 md:h-auto md:w-auto object-cover md:object-contain"
+            src="https://www.mithoficial.com.br/upload/banner/56d574d648cb2dc1203fd157d27e0982.webp"
+            alt="brandão"
+          />
+        </div>
+        <div className="bg-gray-300 p-2">
+          <img
+            className="w-full h-auto md:max-w-none md:max-h-96 md:h-auto md:w-auto object-cover md:object-contain"
+            src="https://www.mithoficial.com.br/upload/produto/imagem/b_jaqueta-bomber-mith-gang-preto-2.webp"
+            alt="zanca"
+          />
+        </div>
+        <div className="bg-gray-300 p-2">
+          <img
+            className="w-full h-auto md:max-w-none md:max-h-96 md:h-auto md:w-auto object-cover md:object-contain"
+            src="https://www.mithoficial.com.br/upload/banner/d58d40e4c72d4f7c97de1b9ed8eb3601.webp"
+            alt="capial"
+          />
+        </div>
+        <div className="bg-gray-300 p-2">
+          <img
+            className="w-full h-auto md:max-w-none md:max-h-96 md:h-auto md:w-auto object-cover md:object-contain"
+            src="https://www.mithoficial.com.br/upload/banner/2fefd9da656b7756ec5926f3c83817e1.webp"
+            alt="diogo"
+          />
+        </div>
+      </AliceCarousel>
+      {/* End Alice carrousel */}
+      <div className="bg-white">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">COLEÇÕES MITH </h2>
+          <p className="mt-4 text-gray-500">
+          Aqui você encontra tudo para montar seu outfit campeão e pode adquirir roupas fabricadas em poliamida premium com elastano, 
+          100% algodão, Techno Taslon Nylon ou proteção UV 50. O silk de qualidade mantém vivas as cores das ilustrações, 
+          com durabilidade para aguentar seja qual for o desafio.
+          </p>
 
-      
+          <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+            {features.map((feature) => (
+              <div key={feature.name} className="border-t border-gray-200 pt-4">
+                <dt className="font-medium text-gray-900">{feature.name}</dt>
+                <dd className="mt-2 text-sm text-gray-500">{feature.description}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+          <img
+            src="https://www.mithoficial.com.br/upload/produto/imagem/b_regata-drop-shoulder-slevelles-ramon-dino-preto-27.webp"
+            alt="Dino"
+            className="rounded-lg bg-gray-100"
+          />
+          <img
+            src="https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-oversized-brand-o-rb-champions-preto-2.webp"
+            alt="brandão"
+            className="rounded-lg bg-gray-100"
+          />
+          <img
+            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg"
+            alt="Side of walnut card tray with card groove and recessed card area."
+            className="rounded-lg bg-gray-100"
+          />
+          <img
+            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg"
+            alt="Walnut card tray filled with cards and card angled in dedicated groove."
+            className="rounded-lg bg-gray-100"
+          />
+        </div>
+      </div>
+    </div>
     </>
   );
 }

@@ -5,12 +5,12 @@ import Form from "./components/Form";
 import Client from "./components/Client";
 import Shop from "./components/Shop";
 import Login from "./components/Login";
-// import Home from "./components/Home";
+import Home from "./components/Home";
 
 
 
 function App() {
-  // receber parametro (nome) fora da função
+  
 
   return (
     <BrowserRouter>
@@ -20,7 +20,7 @@ function App() {
         <Route path="/Shop" element={<Shop />} />
         <Route path="/Form" element={<Form />}/>
         <Route path='/Login' element={<Login />}/>
-         {/* <Route path="/Home" element={<Home/>}/>  */}
+         <Route path="/Home" element={<Home/>}/>  
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
     </BrowserRouter>
