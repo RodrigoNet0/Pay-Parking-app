@@ -38,7 +38,7 @@ export default function ClientSection() {
                     <div className="flex-shrink-0">
                       <img
                         className="h-8 w-8"
-                        src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.d2469773.svg"
+                        src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg"
                         alt="Your Company"
                       />
                     </div>

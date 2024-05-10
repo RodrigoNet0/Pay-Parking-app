@@ -36,7 +36,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img className="h-8 w-auto" src="https://th.bing.com/th/id/R.bc2bf16977f54af49ed0883388029bbe?rik=8EjvAt%2b%2b1bM05A&pid=ImgRaw&r=0" alt="parking-pay" />
+            <img className="h-8 w-auto" src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg" alt="parking-pay" />
           </a>
         </div>
         <div className="flex lg:hidden">

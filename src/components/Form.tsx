@@ -101,7 +101,7 @@ function Form() {
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
-                src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.d2469773.svg"
+                src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg"
                 alt="Mith-profile"
               />
             </a>
