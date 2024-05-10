@@ -67,17 +67,17 @@ function classNames(...classes: string[]) {
 const features = [
   { name: "Dino", description: "A coleção Ramon Dino se destaca como um dos pontos fortes da marca, inspirada por uma figura proeminente no cenário do fisiculturismo nacional." },
   {
-    name: "Material",
+    name: "Brandão",
     description:
-      "Solid walnut base with rare earth magnets and powder coated steel card cover",
+      "A coleção exclusiva e limitada da collab com Rafa Brandão oferece peças de alta qualidade, desenvolvidas com materiais selecionados, para te acompanhar em todas as missões diárias, dentro e fora da academia. ",
   },
-  { name: "Dimensions", description: '6.25" x 3.55" x 1.15"' },
-  { name: "Finish", description: "Hand sanded and finished with natural oil" },
-  { name: "Includes", description: "Wood card tray and 3 refill packs" },
+  { name: "Zanca", description: 'Gabriel Zancanelli é um bodybuilder classic, sua linha classic é o carro chefe da coleção.' },
+  { name: "Horse", description: "Horse é um bodybuilder Old School e utiliza a linha Golden Era." },
+  { name: "Vitor Capial", description: "Coman frutas é sua linha,dispensa apresentação." },
   {
-    name: "Considerations",
+    name: "Dr. Peanut",
     description:
-      "Made from natural materials. Grain and color vary with each item.",
+      "A melhor Pasta de amendoim com a melhor Loja de Roupa!.",
   },
 ];
 
@@ -195,10 +195,10 @@ function Form() {
               Marketplace
             </Link>
             <a
-              href="#"
+              href="https:/www.github.com/rodrigonet0"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
-              Company
+              Github
             </a>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -374,13 +374,13 @@ function Form() {
             className="rounded-lg bg-gray-100"
           />
           <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg"
-            alt="Side of walnut card tray with card groove and recessed card area."
+            src="https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-oversized-zancanelli-classic-physique-preto-2.webp"
+            alt="zanca"
             className="rounded-lg bg-gray-100"
           />
           <img
-            src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg"
-            alt="Walnut card tray filled with cards and card angled in dedicated groove."
+            src="https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-oversized-comam-frutas-abacaxi-preta-6.webp"
+            alt="Capial Iron school"
             className="rounded-lg bg-gray-100"
           />
         </div>
