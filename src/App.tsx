@@ -9,6 +9,7 @@ import PageNot from "./components/PageNot";
 
 
 
+
 function App() {
   
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/Login' element={<Login />}/>
          <Route path="/Home" element={<Home/>}/>  
         <Route path="*" element={<PageNot />} />
+        
       </Routes>
     </BrowserRouter>
   );

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Fragment } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 
+
 import "tailwindcss/tailwind.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -22,6 +23,7 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+
 
 const products = [
   {
@@ -220,8 +222,8 @@ function Form() {
                 <span className="sr-only">Your Company</span>
                 <img
                   className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
+                  src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg"
+                  alt="Mith"
                 />
               </a>
               <button
@@ -270,26 +272,27 @@ function Form() {
                   >
                     Payment
                   </Link>
-                  <a
-                    href="#"
+
+                  <Link
+                    to={'/Shop'}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Marketplace
-                  </a>
+                  </Link>
                   <a
-                    href="#"
+                    href="http:/www.github.com/RodrigoNet0"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Company
+                    GitHub
                   </a>
                 </div>
                 <div className="py-6">
-                  <a
-                    href="#"
+                  <Link
+                   to={'/Login'}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Log in
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -382,9 +385,11 @@ function Form() {
             alt="Capial Iron school"
             className="rounded-lg bg-gray-100"
           />
+   
         </div>
       </div>
     </div>
+
     </>
   );
 }

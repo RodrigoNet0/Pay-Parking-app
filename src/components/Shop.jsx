@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaAngleDoubleLeft } from "react-icons/fa";
-import Header  from './Header';
+import Footer from "./Header2";
 const products = [
   {
     id: 1,
@@ -101,10 +101,11 @@ export default function Shop() {
   return (
     <>
     
-    <Header />
+    <Footer  />
+    
     <div className="bg-white">
       <div className=" mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-      <Link className='  hover:text-black rounded-md px-3 py-2' to={'/Form'}><FaAngleDoubleLeft size={40} /></Link>
+      <Link className='  hover:text-black rounded-md px-3 py-2' to={'/Form'}><FaAngleDoubleLeft size={30} /></Link>
         <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-4">
           Customers also purchased
         </h2>
