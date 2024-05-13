@@ -25,39 +25,33 @@ import {
 
 const products = [
   {
-    name: "Analytics",
-    description: "Get a better understanding of your traffic",
+    name: "Brandão",
+    description: "Linha Brandão",
     href: "#",
     icon: ChartPieIcon,
   },
   {
-    name: "Engagement",
-    description: "Speak directly to your customers",
+    name: "Dino",
+    description: "Linha Ramon Dino",
     href: "#",
     icon: CursorArrowRaysIcon,
   },
   {
-    name: "Security",
-    description: "Your customers’ data will be safe and secure",
+    name: "Zanca",
+    description: "Linha Zanca",
     href: "#",
     icon: FingerPrintIcon,
   },
   {
-    name: "Integrations",
-    description: "Connect with third-party tools",
+    name: "Comam Frutas",
+    description: "Linha Comam Frutas",
     href: "#",
     icon: SquaresPlusIcon,
   },
-  {
-    name: "Automations",
-    description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
 ];
 const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
+  
+  { name: "Contact sales", href: "http:/www.github.com/RodrigoNet0", icon: PhoneIcon },
 ];
 
 function classNames(...classes: string[]) {
@@ -81,10 +75,14 @@ const features = [
   },
 ];
 
+
 function Form() {
   const responsive = {
     0: { items: 1 },
-    1024: { items: 4 },
+    576: { items: 2 },
+    768: { items: 3 },
+    992: { items: 4 },
+    1200: { items: 5 },
   };
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -308,35 +306,36 @@ function Form() {
       </div>
 
       <AliceCarousel
-        responsive={responsive}
-        autoPlay
-        autoPlayInterval={1000}
-        infinite
+         responsive={responsive}
+         autoPlay
+         autoPlayInterval={1000}
+         infinite
+        
       >
         <div className="bg-gray-300 p-2">
           <img
-            className="w-full h-auto md:max-w-none md:max-h-96 md:h-auto md:w-auto object-cover md:object-contain"
-            src="https://www.mithoficial.com.br/upload/banner/56d574d648cb2dc1203fd157d27e0982.webp"
+            className="w-full h- py-1 h-4/5 "
+            src="https://www.mithoficial.com.br/upload/banner/d1673a3298aa2fc4dcdcb80f80a187a3.webp"
             alt="brandão"
           />
         </div>
         <div className="bg-gray-300 p-2">
           <img
-            className="w-full h-auto md:max-w-none md:max-h-96 md:h-auto md:w-auto object-cover md:object-contain"
-            src="https://www.mithoficial.com.br/upload/produto/imagem/b_jaqueta-bomber-mith-gang-preto-2.webp"
+            className="w-full h- py-1 h-4/5 "
+            src="https://www.mithoficial.com.br/upload/banner/cae04f1a9ac7d223543ac5da1827512c.webp"
             alt="zanca"
           />
         </div>
         <div className="bg-gray-300 p-2">
           <img
-            className="w-full h-auto md:max-w-none md:max-h-96 md:h-auto md:w-auto object-cover md:object-contain"
+            className="w-full h- py-1 h-4/5 "
             src="https://www.mithoficial.com.br/upload/banner/d58d40e4c72d4f7c97de1b9ed8eb3601.webp"
             alt="capial"
           />
         </div>
         <div className="bg-gray-300 p-2">
           <img
-            className="w-full h-auto md:max-w-none md:max-h-96 md:h-auto md:w-auto object-cover md:object-contain"
+            className="w-full h- py-1 h-4/5 "
             src="https://www.mithoficial.com.br/upload/banner/2fefd9da656b7756ec5926f3c83817e1.webp"
             alt="diogo"
           />
