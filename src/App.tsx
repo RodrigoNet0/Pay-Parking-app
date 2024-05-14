@@ -6,8 +6,7 @@ import Shop from "./components/Shop";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import PageNot from "./components/PageNot";
-
-
+import Notification from "./components/Notification";
 
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
         <Route path='/Login' element={<Login />}/>
          <Route path="/Home" element={<Home/>}/>  
         <Route path="*" element={<PageNot />} />
-        
+        <Route path="/Notification" element={<Notification />}/>
       </Routes>
     </BrowserRouter>
   );

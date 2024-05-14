@@ -23,6 +23,7 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+import Footer from "./Footer";
 
 
 const products = [
@@ -389,7 +390,7 @@ function Form() {
         </div>
       </div>
     </div>
-
+<Footer />
     </>
   );
 }

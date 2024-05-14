@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { FaAngleDoubleLeft } from "react-icons/fa";
 
 function Login(){
+    
     return (
         <div className="flex  flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -31,13 +32,11 @@ function Login(){
                 </div>
 
                 <div>
-                    <button type="submit" className="flex w-full justify-center rounded-md bg-slate-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
+                    <button type="submit" className="flex w-full justify-center rounded-md bg-slate-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
                 </div>
             </form>
-
-            <Link className=' flex flex-col justify-center text-center mt-7 hover:bg-slate-300 bg-slate-400 text-white hover:text-black rounded-md px-2 py-2 text-sm font-medium' to={'/Form'}><FaAngleDoubleLeft size={22} /></Link>
-            
-
+<Link className="flex flex-col justify-center text-center mt-7  bg-slate-400 text-white hover:text-white rounded-md px-2 py-2 text-sm hover:bg-slate-500   font-semibold" to={'/Notification'}>Sign up</Link>
+            <Link className=' flex flex-col  mt-7  text-black hover:text-black rounded-md px-2 py-2 text-sm ' to={'/Form'}><FaAngleDoubleLeft size={22} /></Link>
         </div>
     </div>
 
