@@ -304,7 +304,7 @@ function Form() {
       {/* //header end => navigation */}
 
       <div>
-        <h1 className=" bg-slate-300 text-center font-extrabold py-3">
+        <h1 className="animate-pulse bg-slate-300  text-center font-semibold py-2">
           FRETE GRÁTIS A PARTIR DE R$ 199,00{" "}
         </h1>
       </div>
@@ -349,7 +349,7 @@ function Form() {
       <div className="bg-white">
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">COLEÇÕES MITH </h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4x animate-bounce">COLEÇÕES MITH </h2>
           <p className="mt-4 text-gray-500">
           Aqui você encontra tudo para montar seu outfit campeão e pode adquirir roupas fabricadas em poliamida premium com elastano, 
           100% algodão, Techno Taslon Nylon ou proteção UV 50. O silk de qualidade mantém vivas as cores das ilustrações, 
