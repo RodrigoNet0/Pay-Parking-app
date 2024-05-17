@@ -1,28 +1,24 @@
-import React from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Fragment } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
 
 
-import "tailwindcss/tailwind.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import "tailwindcss/tailwind.css";
 
 import {
-  ArrowPathIcon,
+  ChevronDownIcon,
+  PhoneIcon
+} from "@heroicons/react/20/solid";
+import {
   Bars3Icon,
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
   SquaresPlusIcon,
-  XMarkIcon,
+  XMarkIcon
 } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
 import Footer from "./Footer";
 
 
