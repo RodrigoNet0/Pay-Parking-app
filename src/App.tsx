@@ -1,12 +1,12 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Form from "./components/Form";
-import Client from "./components/Client";
-import Shop from "./components/Shop";
+import Form from "./pages/Form";
+import Client from "./pages/Client";
+import Shop from "./pages/Shop";
 import Login from "./components/Login";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 import PageNot from "./components/PageNot";
-import Notification from "./components/Notification";
+import Notification from "./pages/Notification/Notification";
 
 
 function App() {

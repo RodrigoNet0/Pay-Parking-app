@@ -19,7 +19,7 @@ import {
   SquaresPlusIcon,
   XMarkIcon
 } from "@heroicons/react/24/outline";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
 
 const products = [

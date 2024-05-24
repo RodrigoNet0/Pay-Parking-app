@@ -12,10 +12,10 @@ const Notification = () => {
 
   const handleCadastro = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-
-    //  chamar à API para realizar o cadastro com os dados inseridos pelo usuário
-
    
+  };
+
+  if(email == "rodrigoneto@gmail.com" && password == "12345"){
     toast.success('Registration successful!', {
       position: 'top-right',
       autoClose: 3000,
@@ -25,9 +25,7 @@ const Notification = () => {
       draggable: true,
       progress: undefined,
     });
-
-   
-  };
+   } 
 
   return (
     <div className="flex justify-center items-center h-screen">
@@ -60,7 +58,7 @@ const Notification = () => {
           />
         </div>
         <div className="flex items-center justify-between">
-          <button
+          <button 
             className="bg-slate-400 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
