@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaAngleDoubleLeft } from "react-icons/fa";
-import Footer from "./Header2";
+import Footer from "../components/Header2";
 const products = [
   {
     id: 1,
