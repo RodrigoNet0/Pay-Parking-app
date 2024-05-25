@@ -21,7 +21,7 @@ const userNavigation = [
   { name: 'Sign out', href: 'https://friendly-train-qw57rxqrxxwf6rj-5173.app.github.dev/Notification' },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 

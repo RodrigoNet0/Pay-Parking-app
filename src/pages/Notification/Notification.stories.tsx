@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Notification from "./Notification";
 
+import  Notification  from './Notification';
 
 const meta: Meta = {
 component: Notification,
@@ -15,6 +15,6 @@ type Story = StoryObj;
 See https://storybook.js.org/docs/api/csf
 to learn how to use render functions.
 */
-export const Primary: Story = {
-render: () => <Notification />
+export const Primary: Story = { 
+render: () =>  <Notification />
 };

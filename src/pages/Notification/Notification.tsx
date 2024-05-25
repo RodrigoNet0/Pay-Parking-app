@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { FaAngleDoubleLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
-
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -12,20 +10,21 @@ const Notification = () => {
 
   const handleCadastro = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-   
+    if(email == "rodrigoneto@gmail.com" && password == "12345"){
+      toast.success('Registration successful!', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      console.log("Cadastro Realizado com sucesso!")
+     } 
   };
 
-  if(email == "rodrigoneto@gmail.com" && password == "12345"){
-    toast.success('Registration successful!', {
-      position: 'top-right',
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
-   } 
+  
 
   return (
     <div className="flex justify-center items-center h-screen">
@@ -78,6 +77,7 @@ const Notification = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
+        limit={1}
       />
         
     </div>
