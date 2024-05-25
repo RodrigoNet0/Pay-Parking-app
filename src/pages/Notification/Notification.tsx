@@ -4,14 +4,21 @@ import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const Notification = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleCadastro = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    if(email == "rodrigoneto@gmail.com" && password == "12345"){
-      toast.success('Registration successful!', {
+
+    const validateEmail = (email: string) => {
+      const re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    };
+
+    if (!email || !validateEmail(email)) {
+      toast.error('Por favor, insira um email válido.', {
         position: 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
@@ -20,12 +27,34 @@ const Notification = () => {
         draggable: true,
         progress: undefined,
       });
-      console.log("Cadastro Realizado com sucesso!")
-     } 
-  };
+      return;
+    }
 
-  
+    if (!password || password.length < 6) {
+      toast.error('A senha deve ter no mínimo 6 caracteres.', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      return;
+    }
 
+    toast.success(`Cadastro realizado com sucesso para o email: ${email}!`, {
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+      console.log("Cadastro realizado com sucesso!");
+    }
+    localStorage.setItem('registeredEmail', email);
   return (
     <div className="flex justify-center items-center h-screen">
       <form onSubmit={handleCadastro} className="w-full max-w-md bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -66,7 +95,7 @@ const Notification = () => {
           <Link to={'/Login'}><FaAngleDoubleLeft size={30} /></Link>
         </div>
       </form>
-      
+
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -79,9 +108,7 @@ const Notification = () => {
         pauseOnHover
         limit={1}
       />
-        
     </div>
-  
   );
 };
 
