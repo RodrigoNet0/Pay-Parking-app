@@ -33,4 +33,6 @@ No botão verde => `|<> code|` <=
 
  - Site oficial Mith
 
+# STATUS DO PROJETO    
+Em andamento
 
