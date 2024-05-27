@@ -1,8 +1,11 @@
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-
-
+import { FaRegCreditCard } from "react-icons/fa";
+import { RxAvatar } from "react-icons/rx";
+import { FaShopify } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { GiClothes } from "react-icons/gi";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import "tailwindcss/tailwind.css";
@@ -88,7 +91,7 @@ function Form() {
 
   return (
     <>
-      <header className="bg-gray-200 rounded-lg">
+      <header className="bg-slate-200 rounded">
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
           aria-label="Global"
@@ -106,7 +109,8 @@ function Form() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 inline-flex items-center 
+              justify-center rounded-md p-2.5 text-gray-700"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -115,8 +119,9 @@ function Form() {
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-                Product
+              <Popover.Button className="flex items-center gap-x-1 text-sm 
+              font-semibold leading-6 text-gray-900">
+                Coleções <GiClothes size={15}/>
                 <ChevronDownIcon
                   className="h-5 w-5 flex-none text-gray-400"
                   aria-hidden="true"
@@ -132,14 +137,17 @@ function Form() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 
+                w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                   <div className="p-4">
                     {products.map((item) => (
                       <div
                         key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm 
+                        leading-6 hover:bg-gray-50"
                       >
-                        <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                        <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg
+                         bg-gray-50 group-hover:bg-white">
                           <item.icon
                             className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                             aria-hidden="true"
@@ -165,7 +173,8 @@ function Form() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold 
+                        leading-6 text-gray-900 hover:bg-gray-100"
                       >
                         <item.icon
                           className="h-5 w-5 flex-none text-gray-400"
@@ -178,32 +187,32 @@ function Form() {
                 </Popover.Panel>
               </Transition>
             </Popover>
-
+              
             <Link
               to={"/Client"}
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className=" flex gap-2 text-center text-sm font-semibold leading-6 text-gray-900"
             >
-              Payment
+              Cadastre<FaRegCreditCard size={15} className="mt-1"/>
             </Link>
             <Link
               to={"/Shop"}
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className=" flex gap-2 text-sm font-semibold leading-6 text-gray-900"
             >
-              Marketplace
+              Vitrine <FaShopify size={15} className="mt-1"/>
             </Link>
             <a
               href="https:/www.github.com/rodrigonet0"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 text-gray-900 flex gap-2"
             >
-              Github
+              GitHub <FaGithub size={15} className="mt-1" />
             </a>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               to={"/Login"}
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className=" flex gap-2 text-sm font-semibold leading-6 text-gray-900"
             >
-              Log in <span aria-hidden="true">&rarr;</span>
+              Entrar/Cadastrar<RxAvatar size={17} className="mt-1" />
             </Link>
           </div>
         </nav>
@@ -239,7 +248,7 @@ function Form() {
                     {({ open }) => (
                       <>
                         <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                          Product
+                          Coleções
                           <ChevronDownIcon
                             className={classNames(
                               open ? "rotate-180" : "",
@@ -267,14 +276,14 @@ function Form() {
                     to={"/Client"}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Payment
+                    Cadastre seu Cartão
                   </Link>
 
                   <Link
                     to={'/Shop'}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Marketplace
+                   Vitrine
                   </Link>
                   <a
                     href="http:/www.github.com/RodrigoNet0"
@@ -288,7 +297,7 @@ function Form() {
                    to={'/Login'}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Log in
+                    Entre/Cadastre-se
                   </Link>
                 </div>
               </div>
@@ -300,7 +309,7 @@ function Form() {
       {/* //header end => navigation */}
 
       <div>
-        <h1 className="animate-pulse bg-slate-300  text-center font-semibold py-2">
+        <h1 className="animate-pulse bg-slate-200 rounded text-center font-semibold py-2">
           FRETE GRÁTIS A PARTIR DE R$ 199,00{" "}
         </h1>
       </div>
