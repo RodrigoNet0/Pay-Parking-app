@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { FaAngleDoubleLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -60,7 +59,7 @@ const Notification = () => {
       <form onSubmit={handleCadastro} className="w-full max-w-md bg-slate-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className='flex justify-between'>
         <img src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg" alt="profile-mith"/>
-        <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">Cadastre-se</h2>
         </div>
         <div className="mb-4 mt-3">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
@@ -77,7 +76,7 @@ const Notification = () => {
         </div>
         <div className="mb-6">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-            Password
+           Senha
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -93,7 +92,7 @@ const Notification = () => {
             className="bg-slate-400 hover:bg-slate-300 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
-            Register
+            Cadastrar
           </button>
           
           <Link className="bg-slate-400 py-2 px-4 rounded focus:outline-none font-bold hover:bg-slate-300 text-gray-700" to={'/Login'}>Já tenho conta!</Link>
