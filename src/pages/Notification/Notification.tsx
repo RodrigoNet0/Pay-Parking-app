@@ -57,9 +57,12 @@ const Notification = () => {
     localStorage.setItem('registeredEmail', email);
   return (
     <div className="flex justify-center items-center h-screen">
-      <form onSubmit={handleCadastro} className="w-full max-w-md bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form onSubmit={handleCadastro} className="w-full max-w-md bg-slate-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div className='flex justify-between'>
+        <img src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg" alt="profile-mith"/>
         <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
-        <div className="mb-4">
+        </div>
+        <div className="mb-4 mt-3">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
             Email
           </label>
@@ -87,12 +90,13 @@ const Notification = () => {
         </div>
         <div className="flex items-center justify-between">
           <button 
-            className="bg-slate-400 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-slate-400 hover:bg-slate-300 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Register
           </button>
-          <Link to={'/Login'}><FaAngleDoubleLeft size={30} /></Link>
+          
+          <Link className="bg-slate-400 py-2 px-4 rounded focus:outline-none font-bold hover:bg-slate-300 text-gray-700" to={'/Login'}>Já tenho conta!</Link>
         </div>
       </form>
 
