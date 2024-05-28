@@ -29,25 +29,25 @@ const products = [
   {
     name: "Brandão",
     description: "Linha Brandão",
-    href: "#",
+    href: "/Shop",
     icon: ChartPieIcon,
   },
   {
     name: "Dino",
     description: "Linha Ramon Dino",
-    href: "#",
+    href: "/Shop",
     icon: CursorArrowRaysIcon,
   },
   {
     name: "Zanca",
     description: "Linha Zanca",
-    href: "#",
+    href: "/Shop",
     icon: FingerPrintIcon,
   },
   {
     name: "Comam Frutas",
     description: "Linha Comam Frutas",
-    href: "#",
+    href: "/Shop",
     icon: SquaresPlusIcon,
   },
 ];
@@ -321,31 +321,31 @@ function Form() {
          infinite
         
       >
-        <div className="bg-gray-300 p-2">
+        <div className="bg-slate-200 p-2">
           <img
             className="w-full h- py-1 h-4/5 "
-            src="https://www.mithoficial.com.br/upload/banner/d1673a3298aa2fc4dcdcb80f80a187a3.webp"
+            src="https://www.mithoficial.com.br/upload/produto/imagem/m_camiseta-oversized-mith-comam-frutas-estonada-quem-faz-dieta-atleta-preto-1.webp"
             alt="brandão"
           />
         </div>
-        <div className="bg-gray-300 p-2">
+        <div className="bg-slate-200 p-2">
           <img
             className="w-full h- py-1 h-4/5 "
-            src="https://www.mithoficial.com.br/upload/banner/cae04f1a9ac7d223543ac5da1827512c.webp"
+            src="https://www.mithoficial.com.br/upload/produto/imagem/m_camiseta-oversized-comam-frutas-abacaxi-preta-3.webp"
             alt="zanca"
           />
         </div>
-        <div className="bg-gray-300 p-2">
+        <div className="bg-slate-200 p-2">
           <img
             className="w-full h- py-1 h-4/5 "
-            src="https://www.mithoficial.com.br/upload/banner/d58d40e4c72d4f7c97de1b9ed8eb3601.webp"
+            src="https://www.mithoficial.com.br/upload/produto/imagem/m_camiseta-oversized-mith-comam-frutas-neon-preto-3.webp"
             alt="capial"
           />
         </div>
-        <div className="bg-gray-300 p-2">
+        <div className="bg-slate-200 p-2">
           <img
             className="w-full h- py-1 h-4/5 "
-            src="https://www.mithoficial.com.br/upload/banner/2fefd9da656b7756ec5926f3c83817e1.webp"
+            src="https://www.mithoficial.com.br/upload/produto/imagem/m_camiseta-oversized-mith-comam-frutas-estonada-desayuno-1992-preto-6.webp"
             alt="diogo"
           />
         </div>
@@ -370,27 +370,28 @@ function Form() {
             ))}
           </dl>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8 scroll-snap-y mandatory h-screen overflow-y-scroll">
           <img
             src="https://www.mithoficial.com.br/upload/produto/imagem/b_regata-drop-shoulder-slevelles-ramon-dino-preto-27.webp"
             alt="Dino"
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray- snap-start"
           />
           <img
             src="https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-oversized-brand-o-rb-champions-preto-2.webp"
             alt="brandão"
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray- snap-start"
           />
           <img
             src="https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-oversized-zancanelli-classic-physique-preto-2.webp"
             alt="zanca"
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray- snap-start"
           />
           <img
             src="https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-oversized-comam-frutas-abacaxi-preta-6.webp"
             alt="Capial Iron school"
-            className="rounded-lg bg-gray-100"
+            className="rounded-lg bg-gray- snap-start"
           />
+          
    
         </div>
       </div>
