@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 const Notification = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleCadastro = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
@@ -51,22 +51,27 @@ const Notification = () => {
       draggable: true,
       progress: undefined,
     });
-      console.log("Cadastro realizado com sucesso!");
-    }
+    console.log("Cadastro realizado com sucesso!");
+
     localStorage.setItem('registeredEmail', email);
+    setTimeout(() => {
+      navigate('/Login');
+    }, 3000);
+  };
+
   return (
     <div className="flex justify-center items-center h-screen">
       <form onSubmit={handleCadastro} className="w-full max-w-md bg-slate-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className='flex justify-between'>
-        <img src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg" alt="profile-mith"/>
-        <h2 className="text-2xl font-bold mb-6 text-center">Cadastre-se</h2>
+          <img src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg" alt="profile-mith"/>
+          <h2 className="text-2xl font-bold mb-6 text-center">Cadastre-se</h2>
         </div>
         <div className="mb-4 mt-3">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
             Email
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className=" px-1 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
             placeholder="Email"
