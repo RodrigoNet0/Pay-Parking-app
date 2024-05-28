@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Notification />} />
         <Route path="/Client" element={<Client />} />
         <Route path="/Shop" element={<Shop />} />
         <Route path="/Form" element={<Form />}/>

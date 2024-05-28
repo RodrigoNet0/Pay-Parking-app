@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -56,7 +56,7 @@ const Notification = () => {
     localStorage.setItem('registeredEmail', email);
     setTimeout(() => {
       navigate('/Login');
-    }, 3000);
+    }, 2000);
   };
 
   return (
@@ -71,7 +71,7 @@ const Notification = () => {
             Email
           </label>
           <input
-            className=" px-1 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
             placeholder="Email"

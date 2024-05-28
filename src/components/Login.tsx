@@ -64,7 +64,7 @@ function Login() {
       });
       setTimeout(() => {
         navigate('/Form');
-      }, 3000);
+      }, 2000);
       console.log("Login realizado com sucesso!");
     } else {
       toast.error("Email ou senha inválidos.", {
