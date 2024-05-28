@@ -23,6 +23,7 @@ import {
   XMarkIcon
 } from "@heroicons/react/24/outline";
 import Footer from "../components/Footer";
+import Collections from "./Collection/Collections";
 
 
 const products = [
@@ -237,7 +238,7 @@ function Form() {
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span className="sr-only">Close menu</span>
+                <span className="sr-only">Close menu</span> 
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
@@ -361,7 +362,7 @@ function Form() {
           com durabilidade para aguentar seja qual for o desafio.
           </p>
 
-          <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+          <dl className=" grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
             {features.map((feature) => (
               <div key={feature.name} className="border-t border-gray-200 pt-4">
                 <dt className="font-medium text-gray-900">{feature.name}</dt>
@@ -370,32 +371,33 @@ function Form() {
             ))}
           </dl>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8 scroll-snap-y mandatory h-screen overflow-y-scroll">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8 ">
           <img
             src="https://www.mithoficial.com.br/upload/produto/imagem/b_regata-drop-shoulder-slevelles-ramon-dino-preto-27.webp"
             alt="Dino"
-            className="rounded-lg bg-gray- snap-start"
+            className="rounded-lg bg-gray- "
           />
           <img
             src="https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-oversized-brand-o-rb-champions-preto-2.webp"
             alt="brandão"
-            className="rounded-lg bg-gray- snap-start"
+            className="rounded-lg bg-gray- "
           />
           <img
             src="https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-oversized-zancanelli-classic-physique-preto-2.webp"
             alt="zanca"
-            className="rounded-lg bg-gray- snap-start"
+            className="rounded-lg bg-gray- "
           />
           <img
             src="https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-oversized-comam-frutas-abacaxi-preta-6.webp"
             alt="Capial Iron school"
-            className="rounded-lg bg-gray- snap-start"
+            className="rounded-lg bg-gray- "
           />
           
    
         </div>
       </div>
     </div>
+    <Collections/>
 <Footer />
     </>
   );
