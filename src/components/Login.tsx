@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { IoEnterOutline } from "react-icons/io5";
+
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -81,7 +83,7 @@ function Login() {
   
 
   return (
-    <div className="flex flex-col justify-center px-6 py-12 lg:px-8 ">
+    <div className="flex flex-col justify-center px-6 py-12 lg:px-8 bg-slate-700">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           className="mx-auto h-10 w-auto shadow-2xl"
@@ -150,11 +152,11 @@ function Login() {
           <div>
             <button
               type="submit"
-              className="flex w-full justify-center rounded-md bg-slate-400 px-3 py-1.5 text-sm 
-              font-semibold leading-6 text-white shadow-sm hover:bg-slate-500 focus-visible:outline 
+              className="flex w-full justify-center rounded-md  px-3 py-1.5 text-sm 
+              font-semibold leading-6 text-slate-400 shadow-sm focus-visible:outline 
               focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Entrar
+             <IoEnterOutline size={30}/>
             </button>
           </div>
         </form>
