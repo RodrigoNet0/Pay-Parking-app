@@ -60,11 +60,8 @@ const Notification = () => {
   };
 
   return (
-    
-    <div className="flex flex-start justify-around px-5 items-center h-screen bg-slate-700">
-      
-      <form onSubmit={handleCadastro} className="w-full max-w-md bg-slate-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        
+    <div className="flex flex-col lg:flex-row items-center lg:justify-center h-screen bg-slate-700">
+      <form onSubmit={handleCadastro} className="w-full max-w-md bg-slate-200 shadow-md rounded px-8 pt-6 pb-8 mb-4 lg:mb-0">
         <div className='flex justify-center'>
           <img src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg" alt="profile-mith" />
         </div>
@@ -76,7 +73,7 @@ const Notification = () => {
             Email
           </label>
           <input
-            className="  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
             placeholder="Email"
@@ -105,13 +102,10 @@ const Notification = () => {
           >
             Cadastrar
           </button>
-
-         
-          
         </div>
         <h4 className='text-center mt-6 font-semibold'>Todos os direitos reservados <span className='font-extrabold'>Drop You</span></h4>
       </form>
-     
+      
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -124,16 +118,7 @@ const Notification = () => {
         pauseOnHover
         limit={1}
       />
-      <div className='w-full h-auto'>
-        <img 
-        src="https://technitute.pk/Images/home-hero-image.png"
-         alt="profile-banner" 
-         
-         />
-      </div>
-      
     </div>
-    
   );
 };
 
