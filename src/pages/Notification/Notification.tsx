@@ -1,5 +1,5 @@
-import  { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -60,11 +60,16 @@ const Notification = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    
+    <div className="flex flex-start justify-around px-5 items-center h-screen bg-slate-700">
+      
       <form onSubmit={handleCadastro} className="w-full max-w-md bg-slate-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div className='flex justify-between'>
-          <img src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg" alt="profile-mith"/>
-          <h2 className="text-2xl font-bold mb-6 text-center">Cadastre-se</h2>
+        
+        <div className='flex justify-center'>
+          <img src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg" alt="profile-mith" />
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold mb-6 text-center mt-6">Cadastre-se</h2>
         </div>
         <div className="mb-4 mt-3">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
@@ -81,7 +86,7 @@ const Notification = () => {
         </div>
         <div className="mb-6">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-           Senha
+            Senha
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -92,18 +97,21 @@ const Notification = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <div className="flex items-center justify-between">
-          <button 
-            className="bg-slate-400 hover:bg-slate-300 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        <div className="flex items-center justify-center">
+          <button
+            className="bg-slate-400 hover:bg-slate-300 text-gray-700 font-bold py-2 
+            px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Cadastrar
           </button>
-          
-          <Link className="bg-slate-400 py-2 px-4 rounded focus:outline-none font-bold hover:bg-slate-300 text-gray-700" to={'/Login'}>Já tenho conta!</Link>
-        </div>
-      </form>
 
+         
+          
+        </div>
+        <h4 className='text-center mt-6 font-semibold'>Todos os direitos reservados <span className='font-extrabold'>Drop You</span></h4>
+      </form>
+     
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -116,7 +124,16 @@ const Notification = () => {
         pauseOnHover
         limit={1}
       />
+      <div className='w-full h-auto'>
+        <img 
+        src="https://technitute.pk/Images/home-hero-image.png"
+         alt="profile-banner" 
+         
+         />
+      </div>
+      
     </div>
+    
   );
 };
 
