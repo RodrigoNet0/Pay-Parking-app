@@ -60,7 +60,8 @@ const Notification = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:justify-center h-screen bg-slate-700">
+    //flex flex-col justify-center px-6 py-12 lg:px-8 h-screen bg-slate-700
+    <div className="flex align-center  px-6 py-12 lg:flex-row lg:px-8 items-center lg:justify-center h-screen bg-slate-700">
       <form onSubmit={handleCadastro} className="w-full max-w-md bg-slate-200 shadow-md rounded px-8 pt-6 pb-8 mb-4 lg:mb-0">
         <div className='flex justify-center'>
           <img src="https://www.mithoficial.com.br/tema/new-mith-vue/dist/img/logo-mith.ae8a4321.svg" alt="profile-mith" />

@@ -158,7 +158,7 @@ function Login() {
         </form>
         <Link
           className="flex flex-col items-center mt-6 text-black hover:text-black px-2 py-2 text-sm"
-          to={"/Form"}
+          to={"/Notification"}
         >
           <FaAngleDoubleLeft size={22} />
          
