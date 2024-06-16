@@ -5,7 +5,7 @@ const products = [
   {
     id: 1,
     name: "CAMISETA RAGLAN SUPERSPORT AMARELO",
-    href: "https://www.mithoficial.com.br/camiseta-oversized-mith-nation-amarelo-amarelo",
+    
     imageSrc:
       "https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-oversized-mith-nation-amarelo-6.webp",
     imageAlt: "Front of men's Basic Tee in black.",
@@ -15,7 +15,7 @@ const products = [
   {
     id: 2,
     name: "CAMISETA RAGLAN SUPERSPORT PRETO",
-    href: "https://www.mithoficial.com.br/camiseta-raglan-supersport-preto-preto",
+    href: "#",
     imageSrc:
       "https://www.mithoficial.com.br/upload/produto/imagem/b_camiseta-raglan-03-preto-2.webp",
     imageAlt: "Front of men's Basic Tee in black.",
