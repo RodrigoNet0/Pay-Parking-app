@@ -309,11 +309,7 @@ function Form() {
 
       {/* //header end => navigation */}
 
-      <div>
-        <h1 className="animate-pulse bg-slate-200 rounded text-center font-semibold py-2">
-          FRETE GRÁTIS A PARTIR DE R$ 199,00{" "}
-        </h1>
-      </div>
+     
 
       <AliceCarousel
          responsive={responsive}

@@ -20,39 +20,9 @@ function Login() {
   const handleLogin = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
-    const validateEmail = (email: string) => {
-      const re = /\S+@\S+\.\S+/;
-      return re.test(email);
-    };
-
-    if (!email || !validateEmail(email)) {
-      toast.error("Por favor, insira um email válido.", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      return;
-    }
-
-    if (!password || password.length < 6) {
-      toast.error("A senha deve ter no mínimo 6 caracteres.", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      return;
-    }
-
     const registeredEmail = localStorage.getItem("registeredEmail");
-    const registeredPassword = "123456";
+    const registeredPassword = localStorage.getItem("registeredPassword");
+
     if (email === registeredEmail && password === registeredPassword) {
       toast.success("Login realizado com sucesso!", {
         position: "top-right",
@@ -161,7 +131,6 @@ function Login() {
           to={"/Notification"}
         >
           <FaAngleDoubleLeft size={22} />
-         
         </Link>
       </div>
 
