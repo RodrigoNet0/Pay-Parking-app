@@ -5,7 +5,7 @@ import Client from "./pages/Client";
 import Shop from "./pages/Shop";
 // import Login from "./components/Login";
 import Home from "./pages/Home";
-import PageNot from "./components/PageNot";
+// import PageNot from "./components/PageNot";
 // import Notification from "./pages/Notification/Notification";
 
 
@@ -21,7 +21,7 @@ function App() {
         <Route path="/Form" element={<Form />}/>
         {/* <Route path='/Login' element={<Login />}/> */}
          <Route path="/Home" element={<Home/>}/>  
-        <Route path="*" element={<PageNot />} />
+        <Route path="*" element={<Form />} />
         {/* <Route path="/Notification" element={<Notification />}/> */}
       </Routes>
     </BrowserRouter>
